@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.product_container {
+   width: 200px;
+   height: 300px;
+   border: 1px solid black;
+   overflow: hidden;
+   padding: 10px;
+   margin: 40px 20px;
+   background-color: white;
+}
+
+.product_image {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    max-width: 250px;
+    min-height: 200px;
+    display: block;
+    object-fit: cover;
+    background-color: rgb(193, 189, 189);
+}
+.product_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+
+/*======================================= TABLATE DEVICES =========================== */
+
+@media screen and  (max-width: 1024px) { 
+
+    .product_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: auto;
+        width: 100%;
+    }
+ }
+
+
+ /*===================================== MOBILE DEVICES ==================================== */
+ @media screen and  (max-width: 600px) { 
+
+    .product_content {     
+        grid-template-columns:  1fr;
+        gap: 1rem;
+    }
+ }
